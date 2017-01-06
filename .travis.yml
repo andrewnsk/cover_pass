@@ -2,12 +2,13 @@ language: python
 python:
   - "3.5"
 install:
-  - pip install coverage==3.7.1 tox==1.9.2 virtualenv==13.1.2
+  - pip install coverage tox virtualenv
 script:
   - tox
   - coverage run --rcfile=.coveragerc setup.py test -s tests.unit
 after_success:
   - bash <(curl -s https://codecov.io/bash)
+  - coveralls
 notifications:
   email:
     on_failure: change
