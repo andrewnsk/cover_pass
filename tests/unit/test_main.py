@@ -16,7 +16,6 @@ class Test(unittest.TestCase):
     def test_return_val2(self):
         self.assertEqual(return_val2(1), 2)
 
-
 if __name__ == "__main__":
     unittest.main()
 

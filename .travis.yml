@@ -10,6 +10,7 @@ script:
 after_success:
   - bash <(curl -s https://codecov.io/bash)
   coveralls
+
 notifications:
   email:
     on_failure: change
