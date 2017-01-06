@@ -6,9 +6,9 @@ install:
   - pip install coveralls
 script:
   - tox
-  - coverage run --rcfile=.coveragerc setup.py test -s tests.unit
+  - coverage run --source=coverpass  --rcfile=.coveragerc setup.py test -s tests.unit
 after_success:
-  coveralls
+  - bash <(curl -s https://codecov.io/bash && coveralls)
 notifications:
   email:
     on_failure: change
