@@ -8,7 +8,6 @@ script:
   - tox
   - coverage run --rcfile=.coveragerc setup.py test -s tests.unit
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
   coveralls
 notifications:
   email:
