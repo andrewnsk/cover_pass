@@ -1,5 +1,5 @@
 import unittest
-from main import *
+from coverpass.main import *
 
 
 class Test(unittest.TestCase):
@@ -14,7 +14,7 @@ class Test(unittest.TestCase):
         self.assertEqual(return_val(1), 2)
 
     def test_return_val2(self):
-        self.assertEqual(return_val(1), 2)
+        self.assertEqual(return_val2(1), 2)
 
 
 if __name__ == "__main__":

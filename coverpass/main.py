@@ -10,3 +10,4 @@ def return_val(val):
 def return_val2(val):
     val += 1
     return val
+
